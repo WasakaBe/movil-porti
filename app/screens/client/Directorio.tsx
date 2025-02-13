@@ -24,6 +24,7 @@ import directorioData from '@/app/constants/datos'
 export default function Directorio() {
   const router = useRouter() // ✅ Reemplazo de `navigation`
   const params = useLocalSearchParams()
+  const idUsuario = params.idUsuario ? Number(params.idUsuario) : undefined
   const idPartido = params.idPartido ? Number(params.idPartido) : undefined
 
   return (

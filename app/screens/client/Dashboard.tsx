@@ -226,7 +226,24 @@ export default function Dashboard() {
             </Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={dashboard_styles.secondaryButton}>
+          <TouchableOpacity
+            style={dashboard_styles.secondaryButton}
+            onPress={() => {
+              if (idUsuario && idPartido) {
+                router.push({
+                  pathname: '/screens/client/Conectate',
+                  params: {
+                    idUsuario: idUsuario.toString(),
+                    idPartido: idPartido.toString(),
+                  },
+                })
+              } else {
+                console.error(
+                  '❌ No se puede navegar: idUsuario o idPartido no están definidos'
+                )
+              }
+            }}
+          >
             <View style={dashboard_styles.headerIcons}>
               <Image
                 source={require('../../assets/iconos/CONECTATE.png')}
@@ -236,7 +253,24 @@ export default function Dashboard() {
             <Text style={dashboard_styles.secondaryButtonText}>Conéctate</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={dashboard_styles.secondaryButton}>
+          <TouchableOpacity
+            style={dashboard_styles.secondaryButton}
+            onPress={() => {
+              if (idUsuario && idPartido) {
+                router.push({
+                  pathname: '/screens/client/Invitacion',
+                  params: {
+                    idUsuario: idUsuario.toString(),
+                    idPartido: idPartido.toString(),
+                  },
+                })
+              } else {
+                console.error(
+                  '❌ No se puede navegar: idUsuario o idPartido no están definidos'
+                )
+              }
+            }}
+          >
             <View style={dashboard_styles.headerIcons}>
               <Image
                 source={getLogoByIdPartido(userData?.id_partido)}
@@ -248,7 +282,24 @@ export default function Dashboard() {
             </Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={dashboard_styles.secondaryButton}>
+          <TouchableOpacity
+            style={dashboard_styles.secondaryButton}
+            onPress={() => {
+              if (idUsuario && idPartido) {
+                router.push({
+                  pathname: '/screens/client/Recargas',
+                  params: {
+                    idUsuario: idUsuario.toString(),
+                    idPartido: idPartido.toString(),
+                  },
+                })
+              } else {
+                console.error(
+                  '❌ No se puede navegar: idUsuario o idPartido no están definidos'
+                )
+              }
+            }}
+          >
             <View style={dashboard_styles.headerIcons}>
               <Image
                 source={require('../../assets/iconos/RECARGAAQUI.png')}
@@ -258,7 +309,24 @@ export default function Dashboard() {
             <Text style={dashboard_styles.secondaryButtonText}>Recargas</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={dashboard_styles.secondaryButton}>
+          <TouchableOpacity
+            style={dashboard_styles.secondaryButton}
+            onPress={() => {
+              if (idUsuario && idPartido) {
+                router.push({
+                  pathname: '/screens/client/ConsultarSaldo',
+                  params: {
+                    idUsuario: idUsuario.toString(),
+                    idPartido: idPartido.toString(),
+                  },
+                })
+              } else {
+                console.error(
+                  '❌ No se puede navegar: idUsuario o idPartido no están definidos'
+                )
+              }
+            }}
+          >
             <View style={dashboard_styles.headerIcons}>
               <Image
                 source={require('../../assets/iconos/CONSULTAR SALDO.png')}
